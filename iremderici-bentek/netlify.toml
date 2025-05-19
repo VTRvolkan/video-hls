@@ -1,0 +1,14 @@
+[build]
+  publish = "video-hls/iremderici-bentek"
+
+[[headers]]
+  for = "/index.m3u8"
+  [headers.values]
+    Content-Type = "application/vnd.apple.mpegurl"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.ts"
+  [headers.values]
+    Content-Type = "video/mp2t"
+    Access-Control-Allow-Origin = "*"
