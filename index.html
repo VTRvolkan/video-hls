@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VolkanTR Canlı Yayın</title>
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #00d8ff;
+    }
+
+    header p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-js {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📡 VolkanTR Canlı Yayın</h1>
+    <p>Hemen aşağıdan yayını izleyebilirsin!</p>
+  </header>
+
+  <div class="video-container">
+    <video
+      id="live-video"
+      class="video-js vjs-default-skin"
+      controls
+      autoplay
+      preload="auto"
+      data-setup='{}'>
+      <source src="https://volkantr1.pages.dev/filmler/film1.m3u8" type="application/x-mpegURL" />
+      Tarayıcınız HLS video oynatmayı desteklemiyor.
+    </video>
+  </div>
+
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+</body>
+</html>
